@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arina Turgeneva - QA Inseneri CV</title>
+    <title>Arina Turgeneva - QA inseneri CV</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@700;800&display=swap" rel="stylesheet">
@@ -11,284 +11,323 @@
     <style>
         :root {
             color-scheme: light dark;
-            --bg-color: #0d0e15;
+            --bg-color: #090a0f;
             --text-main: #ffffff;
-            --text-muted: #cbd5e1;
-            --accent-pink: #f43f5e;
-            --accent-purple: #d946ef;
-            --accent-blue: #0ea5e9;
-            --border-color: rgba(255, 255, 255, 0.12);
-            --impact-bg: rgba(217, 70, 239, 0.06);
-            --impact-border: rgba(217, 70, 239, 0.2);
+            --text-muted: #f1f5f9;
+            --accent-pink: #ff4d73;
+            --accent-purple: #e152ff;
+            --accent-blue: #38bdf8;
+            --border-color: rgba(255, 255, 255, 0.18);
+            --impact-bg: rgba(225, 82, 255, 0.08);
+            --promo-bg: rgba(56, 189, 248, 0.1);
         }
 
         @media (prefers-color-scheme: light) {
             :root {
-                --bg-color: #fcfbfe;
+                --bg-color: #f8fafc;
                 --text-main: #0f172a;
-                --text-muted: #334155;
+                --text-muted: #1e293b;
                 --accent-pink: #db2777;
                 --accent-purple: #c026d3;
                 --accent-blue: #0284c7;
-                --border-color: rgba(0, 0, 0, 0.08);
-                --impact-bg: rgba(192, 38, 211, 0.04);
-                --impact-border: rgba(192, 38, 211, 0.15);
+                --border-color: rgba(0, 0, 0, 0.12);
+                --impact-bg: rgba(192, 38, 211, 0.06);
+                --promo-bg: rgba(2, 132, 199, 0.08);
             }
         }
 
-        * {
-            box-sizing: border-box;
-            max-width: 100vw;
-            overflow-x: hidden;
-        }
+        * { box-sizing: border-box; }
 
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
             background-color: var(--bg-color);
             color: var(--text-main);
-            line-height: 1.65;
+            line-height: 1.45;
             letter-spacing: -0.01em;
-            padding: 40px 20px;
-            width: 100%;
             margin: 0;
-            overflow-x: hidden;
+            padding: 15px 25px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
             background-image:
-                radial-gradient(circle at 10% 10%, color-mix(in srgb, var(--accent-pink) 6%, transparent) 0%, transparent 35%),
-                radial-gradient(circle at 90% 40%, color-mix(in srgb, var(--accent-purple) 6%, transparent) 0%, transparent 40%),
-                radial-gradient(circle at 50% 80%, color-mix(in srgb, var(--accent-blue) 6%, transparent) 0%, transparent 35%);
+                radial-gradient(circle at 10% 10%, color-mix(in srgb, var(--accent-pink) 7%, transparent) 0%, transparent 40%),
+                radial-gradient(circle at 90% 25%, color-mix(in srgb, var(--accent-purple) 7%, transparent) 0%, transparent 45%),
+                radial-gradient(circle at 50% 80%, color-mix(in srgb, var(--accent-blue) 6%, transparent) 0%, transparent 40%);
             background-attachment: fixed;
         }
 
         .no-print-zone {
-            max-width: 840px;
-            margin: 0 auto 20px auto;
+            width: 100%;
+            max-width: 1600px;
+            margin: 0 auto 6px auto;
             display: flex;
             justify-content: flex-end;
+            flex-shrink: 0;
         }
 
         .download-btn {
             background: linear-gradient(135deg, var(--accent-pink), var(--accent-purple));
             color: white;
             border: none;
-            padding: 12px 24px;
-            font-size: 14px;
+            padding: 6px 14px;
+            font-size: 11px;
             font-weight: 700;
-            border-radius: 8px;
+            border-radius: 6px;
             cursor: pointer;
             transition: transform 0.2s, box-shadow 0.2s;
-            font-family: 'Inter', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
         }
 
         .download-btn:hover {
             transform: translateY(-1px);
-            box-shadow: 0 4px 14px color-mix(in srgb, var(--accent-purple) 35%, transparent);
+            box-shadow: 0 4px 12px color-mix(in srgb, var(--accent-purple) 35%, transparent);
         }
 
         .cv-container {
-            max-width: 840px;
+            width: 100%;
+            max-width: 1600px;
             margin: 0 auto;
-            background: color-mix(in srgb, var(--bg-color) 80%, transparent);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            padding: 50px 50px;
+            background: color-mix(in srgb, var(--bg-color) 45%, transparent);
+            backdrop-filter: blur(30px) saturate(120%);
+            -webkit-backdrop-filter: blur(30px) saturate(120%);
+            padding: 24px 30px;
             border-radius: 16px;
             border: 1px solid var(--border-color);
-            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.05);
+            box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.1), 0 20px 50px rgba(0, 0, 0, 0.25);
+            display: flex;
+            flex-direction: column;
+            min-height: 88vh;
+            overflow: hidden;
         }
 
         .header {
-            text-align: center;
-            margin-bottom: 36px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 12px;
+            margin-bottom: 16px;
+            flex-shrink: 0;
         }
 
-        .header h1 {
+        .header-left h1 {
             font-family: 'Manrope', sans-serif;
-            font-size: 36px;
+            font-size: 30px;
             font-weight: 800;
             color: var(--text-main);
-            margin-bottom: 8px;
+            margin: 0 0 2px 0;
             letter-spacing: -0.02em;
         }
 
         .header .title {
-            font-size: 16px;
+            font-size: 13.5px;
             text-transform: uppercase;
-            letter-spacing: 0.08em;
+            letter-spacing: 0.06em;
             color: var(--accent-purple);
             font-weight: 700;
-            margin-bottom: 18px;
+            margin: 0;
         }
 
         .header .contacts {
-            font-size: 13.5px;
+            font-size: 12.5px;
             color: var(--text-muted);
-            line-height: 1.6;
+            line-height: 1.5;
+            text-align: right;
+            font-weight: 500;
         }
 
         .header .contacts a {
-            color: var(--text-main);
-            text-decoration: none;
+            color: var(--accent-blue);
+            text-decoration: underline;
             font-weight: 600;
-            border-bottom: 1px dashed color-mix(in srgb, var(--text-muted) 60%, transparent);
-            transition: border-color 0.2s;
         }
 
-        .header .contacts a:hover {
-            border-bottom-color: var(--accent-pink);
+        .main-layout {
+            display: grid;
+            grid-template-columns: 1.1fr 1.55fr 1.35fr;
+            gap: 25px;
+            flex-grow: 1;
+            overflow: hidden;
         }
 
-        section {
-            margin-bottom: 36px;
+        .column-pane {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            overflow: hidden;
         }
 
+        .column-pane:not(:last-child) {
+            border-right: 1px solid var(--border-color);
+            padding-right: 20px;
+        }
+
+        section { margin-bottom: 14px; }
         h2 {
             font-family: 'Manrope', sans-serif;
-            font-size: 15px;
+            font-size: 11.5px;
             font-weight: 800;
             text-transform: uppercase;
-            letter-spacing: 0.14em;
+            letter-spacing: 0.1em;
             color: var(--accent-pink);
             border-bottom: 1px solid var(--border-color);
-            padding-bottom: 8px;
-            margin-bottom: 16px;
+            padding-bottom: 4px;
+            margin-top: 0;
+            margin-bottom: 10px;
         }
 
-        .summary-text {
-            font-size: 15px;
-            color: var(--text-muted);
-            text-align: justify;
-            text-justify: inter-word;
-        }
+        .summary-text { font-size: 13px; color: var(--text-muted); margin: 0; line-height: 1.5; }
+        .experience-item { margin-bottom: 14px; }
+        .company-name { color: var(--text-main); display: block; font-size: 14px; font-weight: 700; }
+        .job-date { color: var(--accent-purple); font-size: 11.5px; font-weight: 700; display: block; margin-bottom: 2px; }
+        .job-sub { font-size: 12.5px; font-style: italic; color: var(--text-muted); margin-bottom: 5px; font-weight: 500; }
 
-        .skills-content {
-            font-size: 14.5px;
-            color: var(--text-muted);
-        }
-
-        .skills-content strong {
-            color: var(--text-main);
-            font-weight: 700;
-        }
-
-        .experience-item {
-            margin-bottom: 28px;
-        }
-
-        .exp-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-            font-size: 17px;
-            font-weight: 700;
-            margin-bottom: 6px;
-            letter-spacing: -0.01em;
-        }
-
-        .company-name {
-            color: var(--text-main);
-        }
-
-        .job-date {
-            color: var(--accent-purple);
-            font-size: 14px;
-            font-weight: 600;
-        }
-
-        .job-sub {
-            font-size: 15px;
-            font-style: italic;
-            color: var(--text-muted);
-            margin-bottom: 12px;
-            line-height: 1.45;
-        }
-
-        ul {
-    padding-left: 24px;
-    font-size: 13.5px;
-    color: var(--text-muted);
-    list-style-type: dotted; 
-}
-
-        li {
-            margin-bottom: 7px;
-        }
+        ul { padding-left: 15px; font-size: 12.5px; color: var(--text-muted); margin: 0 0 5px 0; }
+        li { margin-bottom: 3px; }
 
         .impact-box {
-            margin-top: 14px;
-            padding: 12px 16px;
-            background-color: var(--impact-bg);
-            border-left: 3px solid var(--accent-purple);
-            border-radius: 6px;
-            font-size: 14px;
-            color: var(--text-muted);
-            line-height: 1.55;
+            margin-top: 5px; padding: 6px 12px; background-color: var(--impact-bg);
+            border-left: 2.5px solid var(--accent-purple); border-radius: 0 4px 4px 0; font-size: 12px; color: var(--text-muted);
+        }
+        .impact-box strong { color: var(--accent-purple); font-weight: 800; text-transform: uppercase; font-size: 9px; }
+
+        .promo-tag {
+            display: inline-block; margin-top: 4px; padding: 3px 8px; background-color: var(--promo-bg);
+            border-radius: 4px; font-size: 11px; font-weight: 700; color: var(--accent-blue); text-transform: uppercase;
         }
 
-        .impact-box strong {
-            color: var(--accent-purple);
-            font-weight: 700;
-            text-transform: uppercase;
-            font-size: 11.5px;
-            letter-spacing: 0.06em;
-            display: inline-block;
-            margin-right: 4px;
-        }
+        .skills-group { margin-bottom: 10px; font-size: 12.5px; }
+        .skills-group strong { color: var(--text-main); display: block; margin-bottom: 2px; }
+        .skills-group p { margin: 0; color: var(--text-muted); }
 
-        .edu-item, .lang-item {
-            font-size: 15px;
-            margin-bottom: 12px;
-            color: var(--text-muted);
-        }
+        .edu-item, .lang-item { font-size: 12.5px; margin-bottom: 6px; color: var(--text-muted); }
+        .edu-item strong, .lang-item strong { color: var(--text-main); }
 
-        .edu-item strong, .lang-item strong {
-            color: var(--text-main);
-            font-weight: 700;
+        .pure-pdf-template { display: none; }
+
+        @media (max-width: 1150px) {
+            body { padding: 10px; height: auto; display: block; }
+            .cv-container { height: auto; padding: 20px; display: block; overflow: visible; }
+            .main-layout { display: flex; flex-direction: column; gap: 22px; }
+            .column-pane { padding-right: 0 !important; border-right: none !important; border-bottom: 1px solid var(--border-color); padding-bottom: 16px; }
         }
 
         @media print {
-            body {
-                background: white !important;
-                color: black !important;
-                padding: 0 !important;
+            @page {
+                size: A4 portrait;
+                margin: 6mm 8mm 6mm 8mm;
             }
 
-            .no-print-zone {
-                display: none !important;
+            html, body {
+                background: #ffffff !important;
+                color: #000000 !important;
+                font-family: Arial, sans-serif !important;
+                padding: 0 !important;
+                margin: 0 !important;
+                height: auto !important;
             }
+
+            .no-print-zone, .header, .main-layout { display: none !important; }
 
             .cv-container {
-                background: white !important;
+                background: #ffffff !important;
                 border: none !important;
                 padding: 0 !important;
                 box-shadow: none !important;
                 backdrop-filter: none !important;
-                -webkit-backdrop-filter: none !important;
+                max-width: 100% !important;
+                display: block !important;
             }
 
-            h1, .company-name, .skills-content strong, .edu-item strong, .lang-item strong {
-                color: black !important;
+            .pure-pdf-template {
+                display: block !important;
+                color: #000000 !important;
             }
 
-            .header .title, .job-date {
-                color: #374151 !important;
+            .pdf-header {
+                text-align: center;
+                margin-bottom: 8px;
             }
 
-            h2 {
-                color: black !important;
+            .pdf-header h1 {
+                font-size: 24px !important;
+                font-weight: bold !important;
+                margin: 0 0 2px 0 !important;
+                color: #000000 !important;
+            }
+
+            .pdf-header .pdf-job-title {
+                font-size: 13px !important;
+                font-weight: bold !important;
+                text-transform: uppercase;
+                margin-bottom: 4px;
+                color: #000000 !important;
+            }
+
+            .pdf-header .pdf-contacts {
+                font-size: 11px !important;
+                color: #000000 !important;
+                font-weight: 500 !important;
+            }
+
+            .pdf-section-title {
+                font-size: 12px !important;
+                font-weight: bold !important;
+                text-transform: uppercase;
                 border-bottom: 2px solid #000000 !important;
+                margin-top: 10px !important;
+                margin-bottom: 6px !important;
+                padding-bottom: 1px !important;
+                color: #000000 !important;
             }
 
-            .header .contacts, .summary-text, .skills-content, .job-sub, ul, .edu-item, .lang-item {
-                color: #1f2937 !important;
+            .pdf-text {
+                font-size: 13px !important;
+                line-height: 1.3 !important;
+                margin: 0 0 4px 0 !important;
+                color: #000000 !important;
             }
 
-            .impact-box {
-                background: #f9fafb !important;
-                border-left: 3px solid #374151 !important;
-                color: #1f2937 !important;
+            .pdf-job-item {
+                margin-bottom: 6px !important;
             }
-            .impact-box strong {
-                color: black !important;
+
+            .pdf-job-row {
+                display: flex !important;
+                justify-content: space-between !important;
+                font-size: 12px !important;
+                font-weight: bold !important;
+                color: #000000 !important;
+            }
+
+            .pdf-job-sub {
+                font-size: 11px !important;
+                font-style: italic !important;
+                margin-bottom: 2px;
+                color: #000000 !important;
+            }
+
+            .pdf-bullets {
+                margin: 0 0 2px 0 !important;
+                padding-left: 16px !important;
+            }
+
+            .pdf-bullets li {
+                font-size: 12px !important;
+                line-height: 1.3 !important;
+                margin-bottom: 2px !important;
+                color: #000000 !important;
+            }
+
+            .pdf-impact-inline {
+                font-size: 11px !important;
+                background: transparent !important;
+                padding: 1px 0 1px 6px !important;
+                border-left: 2.5px solid #000000 !important;
+                margin-top: 2px;
+                color: #000000 !important;
             }
         }
     </style>
@@ -296,177 +335,237 @@
 <body>
 
     <div class="no-print-zone">
-        <button class="download-btn" onclick="window.print()">Laadi alla PDF / Prindi</button>
+        <button class="download-btn" onclick="window.print()">Salvesta PDF</button>
     </div>
 
     <div class="cv-container">
 
-       <header class="header">
-            <h1>Arina Turgeneva</h1>
-            <div class="title">QA Insener · Manuaal- ja automaattestimine · Playwright · TypeScript</div>
+        <div class="pure-pdf-template">
+
+            <div class="pdf-header">
+                <h1>Arina Turgeneva</h1>
+                <div class="pdf-job-title">QA insener | Manuaal- ja automaattestimine</div>
+                <div class="pdf-contacts">
+                    Tallinn, Eesti; Avatud kaugtööle • +372 56938555 • arina.turgeneva98@gmail.com • <a href="https://www.linkedin.com/in/arina-turgeneva-07041a310" style="color:#000; text-decoration:none; font-weight:bold;">LinkedIn</a>
+                </div>
+            </div>
+
+            <div class="pdf-section-title">Enesetuvustus</div>
+            <p class="pdf-text">
+                Praktilise kogemusega QA insener, kes on tegelenud reaalsete kliendiprojektide testimise ja ärikinnisvara platvormi toetamisega. Mul on kogemus funktsionaalse, regressioon-, suitsu-, kasutusmugavuse, API ja andmebaaside testimisega, samuti testdokumentatsiooni loomise, vigade raporteerimise ning nõuete analüüsiga. Olen vilunud veebirakenduste, staging-keskkondade ja sisuhaldussüsteemide (CMS) testimises. Mind iseloomustab suur tähelepanu detailidele, kasutajakeskne mõtlemine ja meeskonna toetamise kogemus, mille sain QA praktikantide ja alustavate tiimide juhendamisel. Hetkel arendan aktiivselt oma teadmisi testiautomaatika valdkonnas (Playwright, TypeScript ja Python) ning otsin uusi väljakutseid QA insenerina ühtses ja toote arendamisele suunatud tiimis.
+            </p>
+
+            <div class="pdf-section-title">Tehnilised oskused</div>
+            <p class="pdf-text">
+                <strong>Testimise põhioskused:</strong> Manuaaltestimine, funktsionaalne testimine, regressioontestimine, suitsutestimine, kasutusmugavuse testimine, UI testimine, API ja DB testimine, DevTools, testlood, kontrollnimekirjad, vigade raporteerimine.<br>
+                <strong>Tööriistad ja automaatika:</strong> Playwright, TypeScript, Python, POM (Page Object Model), Git, Postman, Swagger, DBeaver, SQL, WordPress, GeoJSON, YouTrack, Agile.<br>
+                <strong>Pehmed oskused:</strong> Tiimidevaheline koostöö, mentorlus ja juhendamine, nõuete analüüs, probleemide lahendamine, selge kommunikatsioon.
+            </p>
+
+            <div class="pdf-section-title">Töökogemus</div>
+
+            <div class="pdf-job-item">
+                <div class="pdf-job-row">
+                    <div>Mynted - WordPressi administraator / QA tugi</div>
+                    <div>Okt 2024 - Praegu</div>
+                </div>
+                <div class="pdf-job-sub">Liven: Ärikinnisvara veebiplatvorm korterite otsimiseks ja ostmiseks.</div>
+                <ul class="pdf-bullets">
+                    <li>Funktsionaalse ja kasutusmugavuse testimise läbiviimine lauaarvuti ning mobiili brauserites staging-keskkonnas.</li>
+                    <li>UI, disaini ja andmete valideerimise vigade tuvastamine enne toodangusse (production) saatmist.</li>
+                    <li>Georuumiliste andmete kontroll ja sisukaartide haldamine GeoJSON-i ning WordPressi kaudu.</li>
+                </ul>
+                <div class="pdf-impact-inline"><strong>Mõju:</strong> Ennetasin kriitiliste sisuvigade jõudmist lõppkasutajateni; võtsin iseseisva vastutuse staging-keskkonna testitarnete eest.</div>
+            </div>
+
+            <div class="pdf-job-item">
+                <div class="pdf-job-row">
+                    <div>Tallinn Learning - QA praktikantide juhendaja</div>
+                    <div>Sept 2024 - Praegu</div>
+                </div>
+                <div class="pdf-job-sub">Tulevaste spetsialistide juhendamine reaalsetes toodetes: Multikey, FinMind, Ydalir, EventPanel.</div>
+                <ul class="pdf-bullets">
+                    <li>10-12 praktikandist koosnevate gruppide mentorlus ja töö koordineerimine aktiivsete sprintide raames.</li>
+                    <li>Rohkem kui 500 vearaporti, testloo ja maatriksi ülevaatamine, et tagada kõrge kvaliteet.</li>
+                    <li>Sujuva infovahetuse hoidmine tehniliste tiimide, praktikantide ja projektijuhtide vahel.</li>
+                </ul>
+                <div class="pdf-impact-inline"><strong>Mõju:</strong> Parandasin oluliselt vearaportite kvaliteeti ja detailsust, mis tegi arendajatele vigade parandamise palju lihtsamaks.</div>
+            </div>
+
+            <div class="pdf-job-item">
+                <div class="pdf-job-row">
+                    <div>Tallinn Learning - QA inseneri praktikant</div>
+                    <div>Mai 2024 - Aug 2024</div>
+                </div>
+                <ul class="pdf-bullets">
+                    <li>Funktsionaalse, suitsu- ja regressioontestimise läbiviimine; mõttekaartide (mind maps) ja struktuurijooniste loomine testitava osa määramiseks.</li>
+                    <li>Andmevahetuse ja API-de testimine Postmaniga; andmebaaside päringute kontroll DBeaveri ja SQL-i abil.</li>
+                    <li>Vigade sisestamine, nõuete ebakõlade analüüs ja brauseritevaheliste vigade kontroll YouTrackis.</li>
+                </ul>
+                <div class="pdf-impact-inline"><strong>Mõju:</strong> Parandasin projektide põhjadokumentatsiooni ja aitasin tagada Gratheoni ökosüsteemi stabiilse arengu.</div>
+            </div>
+
+            <div class="pdf-job-item">
+                <div class="pdf-job-row">
+                    <div>Tallinna Tondiraba Huvikool - Kunsti ja digidisaini õpetaja</div>
+                    <div>2020 - Praegu</div>
+                </div>
+                <ul class="pdf-bullets">
+                    <li>Õppeprotsessi juhtimine, erinevate õpigruppide haldamine ja konstruktiivse tagasiside ringide läbiviimine.</li>
+                </ul>
+                <div class="pdf-impact-inline"><strong>Ülekantavad oskused:</strong> Tugev organiseerimisvõime ja meeskonna juhtimise oskused, mida saab edukalt rakendada Agile tiimitöös.</div>
+            </div>
+
+            <div class="pdf-section-title">Testiautomaatika projektid</div>
+            <div class="pdf-job-item">
+                <div class="pdf-job-row">
+                    <div>Playwright + TypeScript UI automaattestide projekt</div>
+                    <div>Õpperaamistik</div>
+                </div>
+                <ul class="pdf-bullets">
+                    <li>Modulaarsete UI end-to-end automaattestide kirjutamine, kasutades Playwrighti ja TypeScripti.</li>
+                    <li>Page Object Model (POM) arhitektuuri rakendamine koodi puhtuse ja lihtsa haldamise tagamiseks.</li>
+                    <li>Projekti struktuuri, seadistuste ja koodiversioonide haldamine GitHubis.</li>
+                </ul>
+            </div>
+
+            <div class="pdf-section-title">Haridus ja koolitused</div>
+            <p class="pdf-text" style="margin-bottom: 4px;"><strong>Tallinn Learning</strong> - QA testiautomaatika kursus (Playwright + TypeScript) | Mai 2025 - Sept 2025</p>
+            <p class="pdf-text" style="margin-bottom: 4px;"><strong>Tallinn Learning</strong> - QA inseneri kursus (Manuaal- ja alustestimine) | Veeb 2024 - Juuni 2024</p>
+            <p class="pdf-text" style="margin-bottom: 0;"><strong>Eesti Kunstiakadeemia (EKA)</strong> - Bakalaureusekraad disaini erialal | 2017 - 2020</p>
+
+            <div class="pdf-section-title">Keeleoskus</div>
+            <p class="pdf-text" style="margin-bottom: 0;">Inglise keel (B2-C1) · Eesti keel (C1) · Vene keel (Emakeel)</p>
+
+        </div>
+
+        <header class="header">
+            <div class="header-left">
+                <h1>Arina Turgeneva</h1>
+                <div class="title">QA insener · Manuaal- ja automaattestimine · Playwright · TypeScript</div>
+            </div>
             <div class="contacts">
-                Eesti, Tallinn, avatud kaugtööle | +372 56938555 |
+                Eesti, Tallinn, Kaugtöö | +372 56938555<br>
                 <a href="mailto:arina.turgeneva98@gmail.com">arina.turgeneva98@gmail.com</a><br>
-               LinkedIn: <a href="https://www.linkedin.com/in/arina-turgeneva-07041a310" target="_blank">linkedin/arina-turgeneva-07041a310</a>
+                LinkedIn: <a href="https://www.linkedin.com/in/arina-turgeneva-07041a310" target="_blank">arina.turgeneva-07041a310</a>
             </div>
         </header>
 
-        <section>
-            <h2>Profiili kokkuvõte</h2>
-            <p class="summary-text">
-               Praktilise kogemusega QA insener, kellel on kogemus reaalsete kliendiprojektide testimisel ning ärikinnisvara platvormi haldamisel ja toetamisel. Pädevus hõlmab funktsionaalset, regressioon-, suitsu-, kasutusmugavuse (usability), API ja andmebaaside testimist, testdokumentatsiooni koostamist, vigade raporteerimist ning nõuete analüüsi. Vilunud veebirakenduste, eel-live (staging) keskkondade ja sisuhaldussüsteemide (CMS) testimises. Hetkel arendan aktiivselt automaattestimise oskusi Playwrighti ja TypeScripti baasil. Omandanud tugeva detailitunnetuse, kasutajakeskse mõtteviisi ja mentorluskogemuse, toetades QA praktikaprogramme ning praktikantide tiime.
-            </p>
-        </section>
-
-        <section>
-            <h2>Tehnilised oskused</h2>
-            <div class="skills-grid">
-                <div class="skills-content">
-                    <p style="margin-bottom: 10px;"><strong>Erialased oskused (Hard Skills):</strong> Manuaaltestimine, funktsionaalne testimine, regressioontestimine, suitsutestimine (Smoke Testing), kasutusmugavuse testimine, UI testimine, API testimine, andmebaaside testimine, testdokumentatsioon, testlood (Test Cases), kontrollnimekirjad (Checklists), vearaportid (Bug Reports), testraportid, nõuete analüüs, Wireflows, mõttekaardid (Mind Maps), Playwright, TypeScript, Python, Page Object Model (POM), GitHub, Postman, Swagger, DBeaver, SQL, YouTrack, Asana, DevTools, Miro, WordPress, Home Designer, HTML, CSS, GeoJSON, georuumiliste andmete valideerimine, koordinaatsüsteemid, Staging-keskkonna testimine, versiooniuuenduste valideerimine, Agile, Scrum, SDLC </p>
-                    <p><strong>Isikuomadused ja koostöö (Soft Skills):</strong> Tiimidevaheline koostöö, huvigruppide haldamine (Stakeholder Management), mentorlus ja juhendamine, selge kommunikatsioon, probleemide lahendamine, tähelepanelikkus detailide suhtes, ajaplaneerimine, kohanemisvõime</p>
+        <div class="main-layout">
+            <div class="column-pane">
+                <div>
+                    <section>
+                        <h2>Enesetuvustus</h2>
+                        <p class="summary-text">
+                            Praktilise kogemusega QA insener, kes on tegelenud reaalsete kliendiprojektide testimise ja ärikinnisvara platvormi toetamisega. Mul on kogemus veebirakenduste, staging-keskkondade ja CMS-platvormide testimisega ning väärtuslik kogemus praktikantide ja tiimide juhendamisel. Hetkel arendan end testiautomaatika valdkonnas (Playwright, TypeScript, Python).
+                        </p>
+                    </section>
+                    <section>
+                        <h2>Tehnilised oskused</h2>
+                        <div class="skills-group">
+                            <strong>Testimise põhioskused:</strong>
+                            <p>Manuaaltestimine, funktsionaalne, regressioon-, suitsu-, kasutusmugavuse, UI, API ja DB testimine, testlood, kontrollnimekirjad, vearaportid.</p>
+                        </div>
+                        <div class="skills-group" style="margin-bottom: 0;">
+                            <strong>Tööriistad ja automaatika:</strong>
+                            <p>Playwright, TypeScript, Python, POM, Git, Postman, Swagger, DBeaver, SQL, WordPress, GeoJSON, YouTrack, Agile.</p>
+                        </div>
+                    </section>
+                    <section>
+                        <h2>Sertifikaadid</h2>
+                        <div class="edu-item"><strong>Automation QA kursus</strong> - Tallinn Learning | 2025</div>
+                        <div class="edu-item"><strong>QA Engineer kursus</strong> - Tallinn Learning | 2024</div>
+                    </section>
+                    <section style="margin-bottom: 0;">
+                        <h2>Haridus</h2>
+                        <div class="edu-item"><strong>Bakalaureusekraad (Disain)</strong> - Eesti Kunstiakadeemia | 2017 - 2020</div>
+                    </section>
                 </div>
-            </div>
-        </section>
-
-        <section>
-            <h2>Töökogemus</h2>
-
-            <!-- Liven Project FIRST -->
-            <div class="experience-item">
-                <div class="exp-header">
-                    <span class="company-name">Mynted — WordPressi administraator / QA tugi (Liven projekt)</span>
-                    <span class="job-date">Okt 2024 – Praegu</span>
-                </div>
-                <div class="job-sub">Liven on kinnisvaraplatvorm uute elamuarenduste korterite sirvimiseks ja ostmiseks.</div>
-                <ul>
-                    <li>Veebilehe sisu haldamine ja värskendamine, kasutades tööriistu WordPress, GeoJSON ja Home Designer.</li>
-                    <li>Veebilehtede loomine ja kohandamine vastavalt ärinõuetele ja visuaalsetele kavanditele.</li>
-                    <li>Uute funktsioonide ja sisumuudatuste testimine staging-keskkondades enne avalikustamist.</li>
-                    <li>Funktsionaalne ja kasutusmugavuse testimine nii lauaarvuti kui ka mobiilibrauseri versioonides.</li>
-                    <li>UI, sisu- ja kasutusmugavusprobleemide tuvastamine enne tootmiskeskkonda (production) viimist.</li>
-                    <li>Väiksemate vigade iseseisev parandamine juhtudel, kui arendaja sekkumine polnud vajalik.</li>
-                    <li>Ajakohase ja täpse kinnisvara- ning korteriinfo tagamine kogu platvormil.</li>
-                    <li>Ettepanekute tegemine veebilehe kasutusmugavuse ja kasutajakogemuse (UX) parendamiseks.</li>
-                </ul>
-                <div class="impact-box">
-                    <strong>Mõju:</strong> Aitasin tagada sisu kvaliteedi ja järjepidevuse kogu platvormil, tuvastades vead enne reaalset avalikustamist ja pakkudes kasutatavusele suunatud tagasisidet. Toetasin töökindlamat avaldamisprotsessi ning parandasin üldist kasutajakogemust veebivärskenduste ja uute projektide käivitamisel. Omandasin kiiresti WordPressi ja Home Designeri kasutuse ning võtsin järg-järgult üle vastutuse iseseisvate ülesannete täitmisel.
-                </div>
+                <section style="margin-top: 14px; margin-bottom: 0;">
+                    <h2>Keeled</h2>
+                    <div class="lang-item"><strong>Inglise</strong> (B2-C1) · <strong>Eesti</strong> (C1) · <strong>Vene</strong> (Emakeel)</div>
+                </section>
             </div>
 
-            <!-- QA Supervisor SECOND -->
-            <div class="experience-item">
-                <div class="exp-header">
-                    <span class="company-name">Tallinn Learning — QA praktikajuhendaja / superviisor</span>
-                    <span class="job-date">Sept 2024 – Praegu</span>
-                </div>
-                <div class="job-sub">QA praktikaprogrammide juhendamine ja toetamine mitmete reaalsete kliendiprojektide raames (sh Multikey, FinMind, Ydalir ja EventPanel).</div>
-                <ul>
-                    <li>10–12 QA praktikandi samaaegne mentorlus, koolitamine ja juhtimine reaalsete tiimidevaheliste testimisülesannete täitmisel.</li>
-                    <li>Rohkem kui 500 vearaporti, tehnilise testloo, jälgitavusmaatriksi (Traceability Matrix) ja lõpliku testdokumentatsiooni läbivaatamine (review) vastavalt valdkonna standarditele.</li>
-                    <li>Tiimiliikmete juhendamine manuaaltestimise parimate praktikate, täpse vigade jälgimise, rangete API-kontrollide ja põhjaliku nõuete kaardistamise osas.</li>
-                    <li>Selge ja kiire infovahetuse tagamine arendajate tiimide, tudengite insenerirühmade ja projektide osapoolte vahel.</li>
-                    <li>Sisesprintide tsüklite, ülesannete jaotuslaudade ja mõttekaartide organiseerimine tööriistade YouTrack ja Miro abil.</li>
-                </ul>
-                <div class="impact-box">
-                    <strong>Mõju:</strong> Vaatasin läbi 500+ vearaportit, testlugu ja testartefakti, aidates ühtlustada ja tõsta dokumentatsiooni kvaliteeti praktikantide tiimides. Parandasin vigade raporteerimise järjepidevust struktureeritud tagasiside ja arvustuste kaudu, mille tulemuseks olid selgemad sammud vigade taasesitamiseks, detailsemad defektiaruanded ning sujuvam suhtlus praktikantide, arendajate ja sidusrühmade vahel.
-                </div>
-            </div>
-
-            <!-- QA Intern THIRD -->
-            <div class="experience-item">
-                <div class="exp-header">
-                    <span class="company-name">Tallinn Learning — QA inseneri praktikant</span>
-                    <span class="job-date">Mai 2024 – Aug 2024</span>
-                </div>
-                <div class="job-sub">Töö reaalsete kliendiprojektidega QA praktikaprogrammi raames.</div>
-                <ul>
-                    <li>Funktsionaalse, regressioon-, suitsu- ja kasutusmugavuse testimise läbiviimine.</li>
-                    <li>Testlugude, kontrollnimekirjade, vearaportite ja koondaruannete koostamine.</li>
-                    <li>API testimine, kasutades tööriista Postman.</li>
-                    <li>Andmebaasidega töötamine tarkvara DBeaver abil.</li>
-                    <li>Osalemine nõuete analüüsis ja dokumentatsiooni läbivaatamises.</li>
-                    <li>Wireflow-skeemide ja mõttekaartide loomine projekti paremaks mõistmiseks ja testimise planeerimiseks.</li>
-                    <li>Defektide ja jooksvate ülesannete haldamine YouTrack süsteemis.</li>
-                    <li>Tiimidevaheline koostöö ja ajurünnakud Miro keskkonnas.</li>
-                </ul>
-                <div class="impact-box">
-                    <strong>Mõju:</strong> Tuvastasin ebakõlasid nõuetes ja testimisstsenaariumides, aidates kaasa projektidokumentatsiooni kvaliteedi parandamisele ja tõhusamale testkaetusele. Osalesin aktiivselt testimistegevustes erinevates projekti keskkondades ja platvormidel, tagades stabiilsed valideerimisprotsessid ja projektide eduka üleandmise.
+            <div class="column-pane">
+                <div style="display: flex; flex-direction: column; gap: 14px;">
+                    <h2>QA ja töökogemus</h2>
+                    <div class="experience-item">
+                        <span class="company-name">Mynted - WordPressi admin / QA tugi</span>
+                        <span class="job-date">Okt 2024 - Praegu</span>
+                        <div class="job-sub">Liven: Ärikinnisvara veebiplatvorm.</div>
+                        <ul>
+                            <li>Veebi- ja mobiilirakenduste testimine staging-keskkondades.</li>
+                            <li>UI, disaini ja funktsionaalsete vigade leidmine enne toodangut.</li>
+                            <li>Kaardikoordinaatide ja andmete kontroll GeoJSON-i abil.</li>
+                        </ul>
+                        <div class="impact-box"><strong>Mõju:</strong> Ennetasin sisuvigade jõudmist live-keskkonda; staging-testitarnete haldamine.</div>
+                    </div>
+                    <div class="experience-item">
+                        <span class="company-name">Tallinn Learning - QA praktikantide juhendaja</span>
+                        <span class="job-date">Sept 2024 - Praegu</span>
+                        <div class="job-sub">Juhendatud projektid: Multikey, FinMind, Ydalir, EventPanel.</div>
+                        <ul>
+                            <li>10-12 praktikandi töö suunamine aktiivsetes sprintides.</li>
+                            <li>Üle 500 vearaporti kontrollimine ja dokumentatsiooni parandamine.</li>
+                            <li>Igapäevase infovahetuse hoidmine arendajate ja tiimi vahel.</li>
+                        </ul>
+                        <div class="impact-box"><strong>Mõju:</strong> Ühtlustasin veakirjelduste kvaliteeti, muutes raportid arendajate jaoks selgeks ja arusaadavaks.</div>
+                    </div>
+                    <div class="experience-item" style="margin-bottom: 0;">
+                        <span class="company-name">Tallinna Tondiraba Huvikool</span>
+                        <span class="job-date">2020 - Praegu - Kunsti ja digidisaini õpetaja</span>
+                        <ul>
+                            <li>Gruppide töö juhtimine ja tagasisidesüsteemide korraldamine.</li>
+                        </ul>
+                        <div class="impact-box"><strong>Ülekantav väärtus:</strong> Tugev meeskonnatöö ja protsesside juhtimise oskus, mis sobib hästi Agile keskkonda.</div>
+                    </div>
                 </div>
             </div>
 
-            <!-- Teacher FOURTH -->
-            <div class="experience-item">
-                <div class="exp-header">
-                    <span class="company-name">Tallinna Tondiraba Huvikool — Kunsti ja digidisaini õpetaja</span>
-                    <span class="job-date">2020 – Praegu</span>
-                </div>
-                <div class="job-sub">Juhtimine, gruppide koordineerimine ja hariduslik mentorlus</div>
-                <ul>
-                    <li>Keraamika, ruumilise visuaalkunsti ja kaasaegse loova küljendusmehaanika õpetamine lastele ja noortele.</li>
-                    <li>Originaalsete, praktiliste õppekavade, tehniliste töövoogude ja loovtöötubade plaanide väljatöötamine.</li>
-                    <li>Erinevate rühmakeskkondade haldamine, suunates ja toetades edukalt 10–12 unikaalsete õpivajadustega õpilast samaaegselt.</li>
-                    <li>Tugevate organisatoorsete strateegiate, avaliku esinemise oskuse ja konstruktiivse tagasiside andmise arendamine, mis on edukalt üle kantud tehniliste QA tiimide juhtimisse.</li>
-                </ul>
+            <div class="column-pane" style="justify-content: flex-start; gap: 14px;">
+                <section>
+                    <h2>Testiautomaatika</h2>
+                    <div class="experience-item" style="margin-bottom: 0;">
+                        <span class="company-name" style="font-size: 13px;">Playwright + TypeScript projektid</span>
+                        <span class="job-date">Õpperaamistik</span>
+                        <ul>
+                            <li>UI automaattestide kirjutamine Playwrighti ja TypeScriptiga.</li>
+                            <li>POM (Page Object Model) mustri kasutamine koodi struktureerimiseks.</li>
+                            <li>Seadistuste ja koodi versioonihalduse juhtimine GitHubis.</li>
+                        </ul>
+                    </div>
+                </section>
+                <section>
+                    <h2>QA karjääri algus</h2>
+                    <div class="experience-item" style="margin-bottom: 0;">
+                        <span class="company-name">Tallinn Learning - QA praktikant</span>
+                        <span class="job-date">Mai 2024 - Aug 2024</span>
+                        <ul>
+                            <li>Funktsionaalse ja regressioontestimise tsüklid staging-keskkonnas.</li>
+                            <li>API-de kontroll Postmanis ja andmebaaside päringud SQL-i abil.</li>
+                            <li>Testitava ala kaardistamine struktuurijoonistega, vigade haldus YouTrackis.</li>
+                        </ul>
+                        <div class="promo-tag">↑ Edutatud praktikantide juhendajaks</div>
+                    </div>
+                </section>
+                <section style="margin-bottom: 0;">
+                    <h2>Praktikaprojektid</h2>
+                    <div class="experience-item" style="margin-bottom: 8px;">
+                        <span class="company-name" style="font-size: 13px; color: var(--accent-purple);">EventPanel rakendus</span>
+                        <p class="summary-text" style="font-size: 12px; margin-top: 2px;">E2E funktsionaalne testimine[cite: 1]. Tuvastasin viidatud vead CLI autoriseerimises, valideerimises ja andmevormides[cite: 1].</p>
+                    </div>
+                    <div class="experience-item" style="margin-bottom: 8px;">
+                        <span class="company-name" style="font-size: 13px; color: var(--accent-purple);">MultiKey platvorm</span>
+                        <p class="summary-text" style="font-size: 12px; margin-top: 2px;">Kasutajaprofiilide loomise, lokaliseerimisloogika ja süsteemi üldiste seadistuste struktuurne testimine.</p>
+                    </div>
+                    <div class="experience-item" style="margin-bottom: 0;">
+                        <span class="company-name" style="font-size: 13px; color: var(--accent-purple);">FinMind portaal & Ydalir</span>
+                        <p class="summary-text" style="font-size: 12px; margin-top: 2px;">Kliendihaldussüsteemide, küsimustike arvutusloogika ja adaptiivse disaini skriptide testimine.</p>
+                    </div>
+                </section>
             </div>
-        </section>
-
-        <section>
-            <h2>Automaattestimise projektid</h2>
-            <div class="experience-item">
-                <div class="exp-header"><span class="company-name">Playwright + TypeScript õppeprojektid</span></div>
-                <div class="job-sub">Tallinn Learning automaattestimise kursused</div>
-                <ul>
-                    <li>Modulaarsete UI automatiseeritud testikogumike väljatöötamine nullist, kasutades Playwrighti ja TypeScripti raamistikke.</li>
-                    <li>Testide ülesehitamine Page Object Model (POM) mustri järgi leheelementide isoleerimiseks, luues kergesti loetava, skaleeritava ja hooldatava testkoodi.</li>
-                    <li>Väidete (assertions), dünaamiliste selektorite, lokaatorite ja korduvkasutatava loogika juurutamine.</li>
-                    <li>Puhaste testkaustade struktuuride ja konfiguratsioonikihtide loomine ning turvaline harude haldus (branch handling) ja push-toimingud GitHubis.</li>
-                </ul>
-            </div>
-        </section>
-
-        <section>
-            <h2>Tootmispraktikad ja projektid</h2>
-            <div class="experience-item" style="margin-bottom: 14px;">
-                <div class="exp-header" style="font-size: 15px;"><span class="company-name">Gratheon ökosüsteem</span> <span class="job-date">— QA praktikant</span></div>
-                <p class="summary-text" style="font-size: 13.5px; margin-top: 2px;">Konfiguratsioonivärskenduste, mikroteenuste interaktsiooni ja varajase juurutamise valideerimisreeglite kontrollimine.</p>
-            </div>
-            <div class="experience-item" style="margin-bottom: 14px;">
-                <div class="exp-header" style="font-size: 15px;"><span class="company-name">MultiKey platvorm</span> <span class="job-date">— QA praktikant</span></div>
-                <p class="summary-text" style="font-size: 13.5px; margin-top: 2px;">Kogu funktsionaalsuse (end-to-end) testimine, kasutajaprofiili parameetrite valideerimine, tõlgete kontroll ja defektide logimine.</p>
-            </div>
-            <div class="experience-item" style="margin-bottom: 14px;">
-                <div class="exp-header" style="font-size: 15px;"><span class="company-name">FinMind platvorm</span> <span class="job-date">— QA praktikant / juhendaja</span></div>
-                <p class="summary-text" style="font-size: 13.5px; margin-top: 2px;">Digitaalsete õppeportaalide süsteemide, kasutajate sammude jälgimise mehhanismide, lokalisatsioonisätete ja viktoriinide arvutuste testimine.</p>
-            </div>
-            <div class="experience-item" style="margin-bottom: 14px;">
-                <div class="exp-header" style="font-size: 15px;"><span class="company-name">Ydalir ökosüsteem</span> <span class="job-date">— QA praktika juhendamine</span></div>
-                <p class="summary-text" style="font-size: 13.5px; margin-top: 2px;">Suuremahulise süsteemitesti järelevalve, platvormi adaptiivse reageerimisvõime (responsiveness) hindamine ja brauseritevahelise kaetuse strateegiad.</p>
-            </div>
-            <div class="experience-item" style="margin-bottom: 14px;">
-                <div class="exp-header" style="font-size: 15px;"><span class="company-name">EventPanel platvorm</span> <span class="job-date">— QA praktikant / kuraator</span></div>
-                <p class="summary-text" style="font-size: 13.5px; margin-top: 2px;">Veebi-, mobiili- ja käsureatööriistade (CLI) ülevaatuste teostamine, veahaldusvalideerimiste jälgimine ja regressioonitestide komplektide struktureerimine.</p>
-            </div>
-        </section>
-
-        <section>
-            <h2>Haridus</h2>
-            <div class="edu-item">
-                <strong>Automaattestimise kursus (Playwright + TypeScript)</strong> — Tallinn Learning | Mai 2025 – Sept 2025
-            </div>
-            <div class="edu-item">
-                <strong>QA inseneri kursus (Manuaal- ja testimise alused)</strong> — Tallinn Learning | Veeb 2024 – Juuni 2024
-            </div>
-            <div class="edu-item">
-                <strong>EKA bakalaureusekraad (Keraamika / Disain)</strong> — Eesti Kunstiakadeemia | 2017 – 2020
-            </div>
-        </section>
-
-        <section>
-            <h2>Keeled</h2>
-            <div class="lang-item">
-                <strong>Inglise keel</strong> (B2-C1) · <strong>Eesti keel</strong> (C1) · <strong>Vene keel</strong> (Emakeel)
-            </div>
-        </section>
+        </div>
 
     </div>
 
